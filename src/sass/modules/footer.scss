@@ -1,0 +1,160 @@
+@import 'variables';
+
+.talk {
+	padding-bottom: 45px;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	@media screen and (min-width:$break-medium){
+		display: flex;
+		padding-bottom: 0;
+		.image {
+			flex: auto;
+			width: 55%;
+		}
+		.image {
+			background-image: url('../images/fpo/contact.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+		.content {
+			text-align: left;
+			padding-left: 40px;
+			padding-top: 10px;
+			width: 45%;
+			.subtitle {
+				text-align: left;
+			}
+		}
+		.item {
+			display: inline-block;
+			vertical-align: top;
+			padding-top: 0;
+			&:first-child {
+				padding-right: em(10);
+				padding-left: em(0);
+			}
+			.info {
+				padding-bottom: 20px;
+			}
+		}
+	}
+	@media screen and (min-width:$break-desktop){
+		.content {
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+		.item {
+			padding: 0;
+			&:first-child {
+				padding-right: em(60);
+				padding-left: em(30);
+		}
+		.info {
+			padding-bottom: 20px;
+			}
+		}
+	}
+	.subtitle {
+		font-weight: 800;
+	}
+	.info {
+		font-size: em(14);
+	}
+	.mail {
+		color: $baseColor;
+	}
+}
+
+footer {
+	background-color: #1E1E1E;
+	display: flex;
+	width: 100%;
+	padding: 40px 0;
+	@media screen and (min-width:$break-medium){
+		padding: 60px 0;
+	}
+	.content {
+		display: flex;
+		position: relative;
+		width: 100%;
+		@media screen and (min-width:$break-medium){
+			width: 80%;
+		}
+	}
+	.content.medium {
+		@media screen and (min-width:$break-medium){
+			width: 92%;
+		}
+	}
+	.social, .logo {
+		flex: auto;
+	}
+	.logo {
+		padding: 0 em(20);
+		transition: all 0.5s;
+		@media screen and (min-width:$break-medium){
+			img {
+				width: 180px;
+			}
+		}
+		&:hover {
+			opacity: .4;
+		}
+	}
+	.social {
+		text-align: right;
+		position: absolute;
+		right: 20px;
+		top: 15px;
+		justify-content: flex-end;
+		li {
+			display: inline-block;
+			padding: 0 5px;
+			a {
+				color: white;
+				font-size: em(22);
+				text-decoration: none;
+				transition: all 0.5s;
+				@media screen and (min-width:$break-medium){
+					font-size: em(30);
+				}
+				&:hover {
+					opacity: .4;
+				}
+			}
+		}
+	}
+}
+
+.copyright {
+	display: inline-block;
+	width: 100%;
+	color: white;
+	background-color: #1E1E1E;
+	text-align: center;
+	position: relative;
+	padding: 30px 0 20px 0;
+	font-size: em(10);
+	@media screen and (min-width:$break-medium){
+		padding: 40px 0;
+	}
+	span {
+		@media screen and (min-width:$break-medium){
+			text-align: left;
+			width: 100%;
+			display: inline-block;
+			font-size: em(16);
+		}
+	}
+	&:before {
+		content: "";
+		width: 90%;
+		height: 1px;
+		position: absolute;
+		background-color: rgba($white, .2);
+		top: 0;
+		left: 5%;
+	}
+}

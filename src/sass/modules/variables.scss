@@ -1,0 +1,36 @@
+$mainFont: "proxima-nova";
+$titleFont: 'league_spartanregular';
+$baseColor : #010101;
+$logoColor : #3CD52E;
+$menuColor : $logoColor;
+$buttonColor: $logoColor;
+$grisColor: #EDEDED;
+$grisInputs: #A3A3A3;
+$placeHolder: #B6B6B6;
+$infoBlog: #868686;
+$facebook: #3B5999;
+$twitter: #5FA9DD;
+$footerColor: #2D2D2D;
+$white: white;
+
+//Break Points 
+
+$break-desktop:992px;
+$break-large:1400px;
+$break-middle:1200px;
+$break-medium: 868px;
+
+
+@font-face {
+    font-family: 'league_spartanregular';
+    src: url('../fonts/leaguespartan-bold-webfont.eot');
+    src: url('../fonts/leaguespartan-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/leaguespartan-bold-webfont.woff2') format('woff2'),
+         url('../fonts/leaguespartan-bold-webfont.woff') format('woff'),
+         url('../fonts/leaguespartan-bold-webfont.ttf') format('truetype'),
+         url('../fonts/leaguespartan-bold-webfont.svg#league_spartanregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+

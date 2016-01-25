@@ -1,0 +1,57 @@
+@import 'variables';
+
+.notifications {
+	position: fixed;
+	z-index: 9999;
+	width: 100%;
+	height: 100%;
+	top:0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: $menuColor;
+	text-align: center;
+	.inner {
+		display: inline-block;
+		top: 35%;
+		position: absolute;
+		left: 0;
+		width: 100%;
+	}
+	.text {
+		font-family: $titleFont;
+		color: $white;
+		line-height: 1.8;
+		padding: 20px em(20);
+		text-align: center;
+		@media screen and (min-width:$break-medium){
+			font-size: em(36);
+			line-height: 1.4;
+			padding: 20px em(80);
+		}
+	}
+	.close-notifications {
+		float: right;
+		padding: 20px;
+		transition: all 0.5s;
+		&:hover {
+			opacity: .4;
+		}
+	}
+	.image {
+		width: 100%;
+		display: inline-block;
+		text-align: center;
+		img {
+			width: 160px;
+			@media screen and (min-width:$break-medium){
+				width: 200px;
+			}
+		}
+	}
+	.button {
+		color: $white;
+		border-color: $white;
+		padding: 2px em(20);
+	}
+}

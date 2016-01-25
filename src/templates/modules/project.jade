@@ -1,0 +1,58 @@
+.project.form
+	.header-form.hide-small
+		.image
+			img(src="images/misc/home-icon-featured.svg", alt="")
+		span.name Project
+	.content.medium
+		.form-close
+		h4.text Start a project, get a quote or learn more about how we can partner to build a successful product.
+		form(action="")
+			fieldset
+				label(for="") full name
+				input(type="text" placeholder="Your first name")
+			fieldset
+				label(for="") email address
+				input(type="mail" placeholder="Your emal address you@example.com")
+			fieldset
+				label(for="") phone number
+				input(type="tel" placeholder="Country code + city + phone number")
+			fieldset
+				label(for="") organization
+				input(type="text" placeholder="Where you work")
+			.type
+				.type-title type of project
+				span.type-text select all that apply
+			.box-type
+				.box-label
+					label.check
+						input(type="checkbox" name="checkbox")
+						.web.icon
+						span web app
+				.box-label
+					label.check
+						input(type="checkbox" name="checkbox")
+						.ecommerce.icon
+						span ecommerce
+				.box-label
+					label.check
+						input(type="checkbox" name="checkbox")
+						.mobile.icon
+						span mobile
+				.box-label
+					label.check
+						input(type="checkbox" name="checkbox")
+						.mvp.icon
+						span mvp
+				.box-label
+					label.check
+						input(type="checkbox" name="checkbox")
+						.product.icon
+						span product prototype
+			a(href="").more-services 
+				span more about our services
+			fieldset
+				label(for="") ABOUT THE PROJECT
+				p.info Tell us about the project, requirements and objectives.
+				textarea(placeholder="Write a few lines about the project")
+			.wrapp-center
+				button.button Submit a project  

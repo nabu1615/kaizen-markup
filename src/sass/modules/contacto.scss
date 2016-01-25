@@ -1,0 +1,309 @@
+@import 'variables';
+
+.form-close {
+	width: 21px;
+	height: 21px;
+	z-index: 99999;
+	background-image: url("../images/misc/close-icon.svg");
+	background-size: 100%;
+	position: absolute;
+	top: 15px;
+	float: left;
+	right: 15px;
+	cursor: pointer;
+	transition: all 0.5s;
+	@media screen and (min-width:$break-medium){
+		width: 31px;
+		height: 31px;
+		top: 30px;
+		right: 30px;
+	}
+	&:hover {
+		opacity: .4;
+	}
+}
+
+.form-error {
+	font-size: em(13);
+	padding: 10px 0;
+	display: inline-block;
+	@media screen and (min-width:$break-medium){
+		font-size: em(18);
+	}
+	&:before {
+		content: "";
+		background-image: url("../images/misc/error-icon.svg");
+		width: 15px;
+		height: 13px;
+		background-size: cover;
+		float: left;
+		margin-right: em(5);
+		@media screen and (min-width:$break-medium){
+			width: 17px;
+			height: 15px;
+			position: relative;
+			top: 1px;
+		}
+	}
+}
+
+.contact {
+	display: none;
+}
+
+.project.form {
+	padding-bottom: 40px;
+	position: relative;
+}
+
+.box-type {
+	padding-top: 10px;
+}
+
+.box-labels {
+	margin-top: 20px;
+}
+
+.form {
+	background-color: $white;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 999999;
+	padding: 80px em(20);
+	@media screen and (min-width:$break-medium){
+		form {
+			width: 60%;
+			margin: 0 auto;
+		}
+		.wrapp-center {
+			padding: 40px 0;
+			background-color: white;
+			width: 100%;
+		}
+	}
+	.box-label {
+		width: 50%;
+		float: left;
+		padding: 5px em(4);
+		@media screen and (min-width:$break-medium){
+			box-sizing: border-box;
+			width: 33.3333%;
+		}
+		&:nth-child(odd){
+			padding-left: 0;
+			@media screen and (min-width:$break-medium){
+				padding: 5px em(4);
+			}
+		}
+		&:nth-child(even) {
+			padding-right: 0;
+			@media screen and (min-width:$break-medium){
+				padding: 5px em(4);
+			}
+		}
+	}
+	.more-services {
+		display: flex;
+		width: 50%;
+		text-decoration: none;
+		height: 145px;
+		flex-direction: column;
+		justify-content: center;
+		text-transform: uppercase;
+		text-align: left;
+		font-size: em(12);
+		padding: 0 em(50);
+		color: $baseColor;
+		transition: all 0.3s;
+		position: relative;
+		@media screen and (min-width:$break-medium){
+			font-size: em(16);
+			width: 33.33333%;
+			margin-top: 32%;
+		}
+		&:hover {
+			opacity: .4;
+		}
+		span {
+			&:after{
+				content: "";
+				background-image: url(../images/misc/see-more-icon-black.svg);
+				background-repeat: no-repeat;
+				width: 11px;
+				height: 9px;
+				background-size: 100%;
+				display: inline-block;
+				position: relative;
+				left: 10px;
+			}
+		}
+	}
+	.check {
+		box-sizing: border-box;
+		text-align: center;
+		padding: 30px 0;
+		background-color:rgba($grisInputs, .2);
+		cursor: pointer;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		height: 145px;
+		justify-content: center;
+		@media screen and (min-width:$break-middle){
+			height: 150px;
+		}
+		@media screen and (min-width:$break-large){
+			height: 250px;
+		}
+		&.active {
+			background: $menuColor;
+			span {
+				color: $white;
+			}
+			.web {
+				background-image: url("../images/fpo/service-webapp-hover.svg");
+			}
+			.ecommerce {
+				background-image: url("../images/fpo/service-ecommerce-hover.svg");
+			}
+			.mobile {
+				background-image: url("../images/fpo/service-mobile-hover.svg");
+			}
+			.mvp {
+				background-image: url("../images/fpo/service-mvp-hover.svg");
+			}
+			.product {
+			background-image: url("../images/fpo/service-product-hover.svg");
+			}
+		}
+		span {
+			display: inline-block;
+			width: 100%;
+			padding: 10px 0;
+		}
+		input {
+			cursor: pointer;
+			appearance: none;
+			position: absolute;
+			left: 0;
+			bottom:0;
+			height: 100%;
+			border:none;
+			opacity: 0;
+		}
+		.icon {
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center center;
+			margin: 0 auto;
+		}
+		.web {
+			width: 60px;
+			height: 46px;
+			background-image: url("../images/fpo/service-webapp.svg");
+		}
+		.ecommerce {
+			width: 60px;
+			height: 46px;
+			background-image: url("../images/fpo/service-ecommerce.svg");
+		}
+		.mobile {
+			width: 37px;
+			height: 67px;
+			background-image: url("../images/fpo/service-mobile.svg");
+		}
+		.mvp {
+			width: 75px;
+			height: 40px;
+			background-image: url("../images/fpo/service-mvp.svg");
+		}
+		.product {
+			width: 75px;
+			height: 40px;
+			background-image: url("../images/fpo/service-product.svg");
+		}
+	}
+	.text {
+		font-family: $titleFont;
+		font-size: em(16);
+		line-height: 1.4;
+		@media screen and (min-width:$break-medium){
+			font-size: em(32);
+			padding: 40px 0;
+		}
+		a {
+			color: $menuColor;
+			text-decoration: none;
+			transition: all 0.3s;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	form {
+		padding-top: 20px;
+	}
+	label, .type-title {
+		display: inline-block;
+		width: 100%;
+		text-transform: uppercase;
+		font-weight: 100;
+		font-size: em(12);
+		padding: 5px 0;
+		font-weight: 800;
+		@media screen and (min-width:$break-medium){
+			font-size: em(19);
+		}
+	}
+	fieldset {
+		padding: 15px 0;
+		width: 100%;
+		@media screen and (min-width:$break-medium){
+			padding: 30px 0;
+		}
+	}
+	.info, .type-text {
+		font-size: em(13);
+	}
+	input, textarea {
+		width: 100%;
+		display: inline-block;
+		border: none;
+		padding: 10px;
+		border-bottom: 1px solid $grisInputs;
+		font-family: $mainFont;
+		@media screen and (min-width:$break-medium){
+			font-size: em(18);
+		}
+	}
+	.button {
+		padding-left: em(15);
+		padding-right: em(15);
+		margin-top: 10px;
+	}
+}
+
+.header-form {
+    position: absolute;
+    top: 15px;
+    left: 30px;
+	.image {
+		display: inline-block;
+		img {
+			width: 140%;
+		}
+	}
+	span {
+		color: $menuColor;
+		font-weight: 800;
+		font-size: em(21);
+		position: relative;
+		bottom: 33px;
+		left: 30px
+	}
+}

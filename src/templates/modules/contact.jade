@@ -1,0 +1,25 @@
+.contact.form
+	.header-form.hide-small
+		.image
+			img(src="images/misc/home-icon-featured.svg", alt="")
+		span.name Contact
+	.content.medium
+		.form-close
+		h4.text Get in touch with us, if you have comments, suggestions or compliments. If you want to start a project with us use the 
+			a(href="") project planner.
+		form(action="")
+			fieldset
+				label(for="") full name
+				input(type="text" placeholder="Your first name")
+				span.form-error Por favor, llena este campo para continuar
+			fieldset
+				label(for="") email address
+				input(type="mail" placeholder="Your emal address you@example.com")
+			fieldset
+				label(for="") phone number
+				input(type="tel" placeholder="Country code + city + phone number")
+			fieldset
+				label(for="") message
+				textarea(name="", cols="30", rows="5" placeholder="Write  your message here")
+			.wrapp-center
+				button.button Send

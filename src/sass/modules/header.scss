@@ -1,0 +1,145 @@
+@import 'variables';
+
+
+.header {
+	width: 100%;
+	display: inline-block;
+	padding: 14px 0;
+	position: fixed;
+	height: 76px;
+	background-color: $white;
+	z-index: 999;
+	@media screen and (min-width:$break-medium){
+		padding: 20px em(50);
+		height: auto;
+	}
+	.content {
+		display: block;
+	}
+	#blog {
+		@media screen and (min-width:$break-medium){
+			display: none;
+		}
+	}
+	.home-icon {
+		background-image: url(../images/misc/home-icon-small.svg);
+		background-size: 100%;
+		width: em(48);
+		height: em(48);
+		float: left;
+		display: none;
+		@media screen and (min-width:$break-medium){
+			background-image: url(../images/misc/home-icon-large.svg);
+			width: em(160);
+			height: em(52);
+			background-position: center center;
+			display: block;
+		}
+	}
+	.action_mobile {
+		cursor: pointer;
+		padding: 0;
+		float: right;
+		position: absolute;
+		top: 0;
+		z-index: 99;
+		right: 1.25em;
+		height: 40px;
+		width: 35px;
+		padding-top: 19px;
+		@media screen and (min-width:$break-medium){ 
+			display: none;
+		}
+		&.active span {
+			background-color: transparent;
+		}
+		&.active span:before, &.active span:after {
+			top:0;
+			background: white;
+		}
+		&.active span:before {
+			transform: rotate(45deg);
+		}
+		&.active span:after {
+			transform: rotate(-45deg);
+		}
+		span {
+			background-color: transparent;
+			&:before {
+				top: em(-10);
+			}
+			&:after {
+				bottom: em(-10);
+			}
+		}
+		span, span:before, span:after {
+			cursor: pointer;
+			border-radius: 1px;
+			height: em(4);
+			width: em(35);
+			background-color: $baseColor;
+			position: absolute;
+			display: block;
+			content: '';
+		}
+	}
+	.nav {
+		display: none;
+		font-family: $titleFont;
+		position: fixed;
+		height: 100%;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: $menuColor;
+		transition: width 250ms ease-out;
+		@media screen and (min-width:$break-medium){
+			position: relative;
+			display: flex !important;
+			background-color: $white;
+			justify-content: flex-end;
+			font-family: $mainFont;
+			line-height: 2;
+		}
+		ul {
+			position: relative;
+			top: 28%;
+			@media screen and (min-width:$break-medium){ 
+				margin: 0;
+				line-height: 3;
+			}
+			li {
+				display: inline-block;
+				width: 100%;
+				@media screen and (min-width:$break-medium){
+					flex: auto;
+					display: initial;
+					width: auto;
+					padding: 0 em(10);
+				}
+				a {
+					color: white;
+					display: inherit;
+					width: inherit;
+					text-align: center;
+					padding: em(10) 0;
+					font-size: em(20);
+					text-decoration: none;
+					transition: color 250ms ease-out,background 250ms ease-out;
+					@media screen and (min-width:$break-medium){ 
+						color: $baseColor;
+						font-size: em(14);
+						text-transform: uppercase;
+						font-weight: 800;
+					}
+					&:hover {
+						background-color: $white;
+						color: $menuColor;
+					}
+				}
+			}
+		}
+	}
+}
+

@@ -1,0 +1,22 @@
+block variables
+	title Kaizen
+extend ../basetemplate.jade
+block content
+	include ../modules/header.jade
+	.wrapper
+		.inner
+			include ../modules/featured-call.jade
+			include ../modules/featured-works.jade
+			include ../modules/testimonials.jade
+			include ../modules/team.jade
+			include ../modules/collaborators.jade
+			.wrapp-services#services-box
+				.divider
+				include ../modules/services.jade
+			.wrapp-technology
+				.divider
+				include ../modules/technology.jade
+			include ../modules/start.jade
+			include ../modules/talk.jade
+	include ../modules/contact.jade
+	include ../modules/footer.jade

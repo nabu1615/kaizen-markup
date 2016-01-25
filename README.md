@@ -1,1 +1,1 @@
-# kaize devs
+# kaizen devs
